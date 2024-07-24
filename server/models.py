@@ -42,18 +42,3 @@ class Pizza(db.Model, SerializerMixin):
     def __repr__(self):
         return f"<Pizza {self.name}, {self.ingredients}>"
 
-
-class RestaurantPizza(db.Model, SerializerMixin):
-    __tablename__ = "restaurant_pizzas"
-
-    id = db.Column(db.Integer, primary_key=True)
-    price = db.Column(db.Integer, nullable=False)
-
-    # add relationships
-
-    # add serialization rules
-
-    # add validation
-
-    def __repr__(self):
-        return f"<RestaurantPizza ${self.price}>"
